@@ -1,0 +1,65 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Python virtual environment
+venv/
+env/
+.venv/
+.conda/
+
+# pip and conda environments
+*.env
+*.conda
+*.virtualenv
+
+# General files created by Python and training runs
+*.log
+*.ckpt
+*.h5
+*.csv
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# PyTorch cache
+.cache/
+.cache/*
+
+# Dataset and large training artifacts
+dataset/
+checkpoint/
+*.tar.gz
+*.zip
+
+# Torch distributed training artifacts
+*.pt
+*.pth
+*.bin
+
+# Build directories (CUDA/NCCL/PyTorch)
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+
+# OpenMPI and NCCL temporary files
+*.out
+*.log
+tmp/
+openmpi-*/
+
+# Large directories
+nccl/
+nccl-tests/
+pytorch/
+
+# Config files or environment settings (if sensitive)
+config.sh
+.env
+
