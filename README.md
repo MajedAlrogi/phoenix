@@ -16,7 +16,12 @@ This project outlines the steps to set up a distributed environment for Neuronab
 ---
 
 # Initialization
-
+First, please update the submodule for the project.
+ ```bash
+git submodule update --init --recursive
+ ```
+Second, we need mamba or conda installed. You can install mamba [here](https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html)
+We also need to setup remote nodes for mpirun or torchrun, make sure that you have /etc/hosts and ~/.ssh/config properly configured. (i.e. you can ssh to the remote nodes using hostname without password)
 # ORI setup
 ### Configuration File (`config.sh`)
 
