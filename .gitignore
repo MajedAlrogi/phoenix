@@ -55,11 +55,12 @@ tmp/
 openmpi-*/
 
 # Large directories
-nccl/
-nccl-tests/
-pytorch/
+#nccl/
+#nccl-tests/
+#pytorch/
 
 # Config files or environment settings (if sensitive)
 config.sh
 .env
 
+third_party/NVTX/
