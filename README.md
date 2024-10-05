@@ -86,5 +86,8 @@ echo "activated environment!"
 source config.sh
 ```
 ### building-nccl:
-Simply invoke the script `scripts/build_nccl.sh`
+Simply invoke the script `scripts/build_nccl.sh`.
 installation can be tested with `scripts/test_nccl.sh`
+### building-pytorch-from-source:
+Simply invoke the script `scripts/build_pytorch.sh`.
+installation can be tested with `python scripts/test_nccl_ddp.py` (you migh need to install sympy: `mamba install sympy` )
