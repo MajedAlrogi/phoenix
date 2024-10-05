@@ -9,8 +9,6 @@ This project outlines the steps to set up a distributed environment for Neuronab
    - [Configuration file (`config.sh`)](#configuration-file-configsh)
    - [Creating the environment (`create_env.sh`)](#creating-the-environment-create_envsh)
 2. [Building NCCL](#building-nccl)
-   - [Cloning and building NCCL](#cloning-and-building-nccl)
-   - [Testing NCCL](#testing-nccl)
 3. [Building PyTorch from Source](#building-pytorch-from-source)
 4. [Final Test with Distributed BERT Training](#final-test-with-distributed-bert-training)
 
@@ -26,13 +24,13 @@ Later, when building PyTorch and NCCL from source (using submodules), we will sw
 
 # ORI setup
 
-#### Steps:
+#### Pre-Build Steps:
 1. make a directory in phoenix called ori
  ```bash
 mkdir ori
 ```
 
-2. export an environment variable called $ENV_INSTALL_PATH and CUDA_HOME
+2. export an environment variable called `$ENV_INSTALL_PATH` and `CUDA_HOME`
 ```bash
 # Path to your environment installation
 export ENV_INSTALL_PATH=[path to phoenix]/ori
@@ -87,4 +85,6 @@ echo "activated environment!"
  ```bash
 source config.sh
 ```
-6. 
+### building-nccl:
+Simply invoke the script `scripts/build_nccl.sh`
+installation can be tested with `scripts/test_nccl.sh`
