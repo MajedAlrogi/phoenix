@@ -67,7 +67,7 @@ export PATH=$CUDA_HOME/bin:$PATH
 
 # Add CUDA libraries to library search path
 export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
-export TRANSFORMERS_CACHE=/data/fat/neuronabox/phoenix/cache/transformers
+export TRANSFORMERS_CACHE=[path to phoenix]/cache/transformers
 echo "Environment variables have been set."
 
 # Modify the following to use the master node's IP address and an available port
@@ -85,6 +85,6 @@ echo "activated environment!"
 
 5. invoke the config
  ```bash
-source conffig.sh
+source config.sh
 ```
 6. 
