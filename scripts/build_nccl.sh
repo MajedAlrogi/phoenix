@@ -24,11 +24,11 @@ fi
 cd nccl
 
 # Check out the version of NCCL you want to build (replace with the desired version)
-NCCL_VERSION="v2.10.3-1"
+NCCL_VERSION="v2.19.4-1"
 git checkout $NCCL_VERSION
 
 # Build NCCL with CUDA support
-make -j src.build CUDA_HOME=$CUDA_HOME
+make -j$(nproc) src.build CUDA_HOME=$CUDA_HOME
 
 # Install NCCL into the custom environment path
 make install PREFIX=$ENV_INSTALL_PATH

@@ -14,7 +14,7 @@ set -ex
 
 # Step 1: Install additional dependencies needed to build PyTorch
 echo "Installing additional dependencies for PyTorch..."
-mamba install -c conda-forge libuv protobuf openmpi cmake ninja pyyaml typing_extensions
+#mamba install -c conda-forge libuv protobuf openmpi cmake ninja pyyaml typing_extensions
 
 # Step 2: Clone the PyTorch repository if it doesn't exist
 echo "Cloning the PyTorch repository..."
@@ -44,7 +44,7 @@ python setup.py clean
 
 # Step 6: Build and install PyTorch
 echo "Building and installing PyTorch with NCCL and CUDA support..."
-python setup.py install
-
+#python setup.py install -j$(nproc)
+MAX_JOBS=$(nproc) python setup.py install
 echo "PyTorch build completed!"
 

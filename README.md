@@ -25,7 +25,7 @@ We also need to setup remote nodes for mpirun or torchrun, make sure that you ha
 # ORI setup
 ### Configuration File (`config.sh`)
 
-The `config.sh` script sets up the environment variables required for the project. This includes paths for the environment, CUDA, and NCCL, as well as setting up the distributed training configuration (master address and port). We will be creating a custom mamba/conda environment for this project. There will be two environments labelled ori and emu. One of which is an unmodified distributed environment using pytorch version v2.4.1 , NCCL version v2.10.3-1. The other environment wiill use a modified version  of pytorch and NCCL for emulation purposes.
+The `config.sh` script sets up the environment variables required for the project. This includes paths for the environment, CUDA, and NCCL, as well as setting up the distributed training configuration (master address and port). We will be creating a custom mamba/conda environment for this project. There will be two environments labelled ori and emu. One of which is an unmodified distributed environment using pytorch version v2.4.1 , NCCL version v2.19.4-1. The other environment wiill use a modified version  of pytorch and NCCL for emulation purposes.
 
 Later, when building PyTorch and NCCL from source (using submodules), we will switch to these specific versions by checking out the appropriate tags in the submodules.
 
