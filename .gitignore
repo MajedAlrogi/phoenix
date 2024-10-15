@@ -55,7 +55,6 @@ tmp/
 openmpi-*/
 
 # Large directories
-nccl/
 nccl-tests/
 pytorch/
 
