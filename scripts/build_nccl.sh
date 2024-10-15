@@ -17,14 +17,22 @@ set -ex
 
 # Clone NCCL repository if not already present
 if [ ! -d "nccl" ]; then
-    git clone https://github.com/NVIDIA/nccl.git
+    git clone https://github.com/MajedAlrogi/nccl-phoenix-2.0 nccl
 fi
 
 # Navigate into the NCCL directory
 cd nccl
 
-# Check out the version of NCCL you want to build (replace with the desired version)
-NCCL_VERSION="v2.19.4-1"
+# Check out the version of NCCL you want to build (BASED ON v2.19.4-1)
+if [[ "$ENV_INSTALL_PATH" == *"ori"* ]]; then
+    NCCL_VERSION="ori"
+elif [[ "$ENV_INSTALL_PATH" == *"emu"* ]]; then
+    NCCL_VERSION="emu"
+else
+    echo "No valid branch found for the given ENV_INSTALL_PATH. Please make sure it contains 'ori' or 'emu'."
+    exit 1
+fi
+
 git checkout $NCCL_VERSION
 
 # Build NCCL with CUDA support
