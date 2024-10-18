@@ -4,3 +4,6 @@
 [submodule "nccl"]
 	path = nccl
 	url = https://github.com/MajedAlrogi/nccl-phoenix-2.0
+[submodule "pytorch"]
+	path = pytorch
+	url = git@github.com:MajedAlrogi/pytorch-phoenix.git
