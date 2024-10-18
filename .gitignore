@@ -56,7 +56,7 @@ openmpi-*/
 
 # Large directories
 nccl-tests/
-pytorch/
+
 
 # Config files or environment settings (if sensitive)
 config.sh
