@@ -1,6 +1,3 @@
-[submodule "pytorch"]
-	path = pytorch
-	url = https://github.com/pytorch/pytorch.git
 [submodule "nccl-tests"]
 	path = nccl-tests
 	url = https://github.com/NVIDIA/nccl-tests.git
